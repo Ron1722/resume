@@ -73,9 +73,7 @@ h1:hover{
 .about{
     display: flex;
     flex-direction: row;
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-top: 7%;
+    margin: 5% ;
     padding: 1.5%;
     text-align: center;
     border: 1px solid;
@@ -87,6 +85,12 @@ h1:hover{
     -moz-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
     -o-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
     box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+}
+
+@media only screen and (max-width: 760px) {
+    .about{
+        display: block;
+    }
 }
 
 .info{
@@ -102,43 +106,63 @@ h1:hover{
 /***********************************************************************
  *  Skills
  **********************************************************************/
- .marquee {
-    display: block;
+#skills{
     width: 100%;
+    margin: 20px 0px;
+}
+
+.marquee {
+    display: block;
     padding: 10px;
     background: black;
     overflow: hidden;
     position: relative;
-  }
+}
   
-  p{
+.marquee p{
     color:red;
+    font-size: 1.5em;
 }
 
-span{
-    color: linear-gradient(to right, blue,white);
+span:hover{
+    color: #FFFF4B;
 }
   
-  .right-left {
+.right-left{
+    display: flex;
+    justify-content: space-evenly;
     position: relative;
     color: darkgoldenrod;
     overflow: hidden;
-    animation: skills-motion 30s reverse infinite; 
-    -webkit-animation: skills-motion 30s reverse infinite;
+    animation: skills-motion 40s reverse infinite; 
+    -webkit-animation: skills-motion 40s reverse infinite;
     animation-timing-function: linear;
-    display: inline-block;
+    font-size: 1em;
+    margin: 5px;
+}
+
+.right-left:hover{
+    -webkit-animation-play-state:paused;
+    animation-play-state:paused;
+    cursor: pointer;
   }
 
 .left-right {
+    display: flex;
+    justify-content: space-evenly;
     position: relative;
     color: darkgoldenrod;
     overflow: hidden;
-    animation: skills-motion 30s normal infinite;
-    -webkit-animation: skills-motion 30s normal infinite;
+    animation: skills-motion 40s normal infinite;
+    -webkit-animation: skills-motion 40s normal infinite;
     animation-timing-function: linear;
-    display: inline-block;
+    margin: 5px;
+}
+.left-right:hover{
+    -webkit-animation-play-state:paused;
+    animation-play-state:paused;
+    cursor: pointer;
   }
-  
   
   @keyframes skills-motion {
     from {left: -100%;}
