@@ -119,7 +119,7 @@ h1:hover{
     position: relative;
 }
   
-.marquee p{
+.marquee h3{
     color:red;
     font-size: 1.5em;
 }
@@ -174,3 +174,22 @@ span:hover{
     from {left: -100%;}
     to {left: 100%;}
   }
+
+/***********************************************************************
+ *  Grid Panel
+ **********************************************************************/
+ .grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-gap: 20px;
+}
+
+.box {
+    background-color: #444;
+    padding: 130px;
+    margin: 20px;
+}
+
+.box > img {
+    width: 100%;
+}
